@@ -108,6 +108,12 @@ section.main {
 	margin-bottom: 30px;
 	padding      : 0;
 }
+/* It cleans the floats elements inside section. A phanton element is inserted after sections */
+section::after { /* Pseudo element that allows insert content after each section */
+	content: '';
+	display: block;
+	clear  : both; /* It clears float left and right */
+}
 
 section.main aside {
 	width     : 33%;
