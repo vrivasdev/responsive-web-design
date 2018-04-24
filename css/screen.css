@@ -152,3 +152,33 @@ section.atmosphere article {
 	background: url(../images/photo_lounge.jpg) no-repeat 0 5px;
 	min-height: 220px; /* If it wouldn't exist the images height will be attached to the article contents height*/
 }
+
+/* Section - How To */
+
+section.how-to {
+	background-color: #eee9d9; 
+	position        : relative; /* All elements inside this one are relative */
+}
+
+section.how-to aside {
+	width       : 30%;
+	float       : left;
+	margin-right: 10px;
+}
+
+section.how-to aside .content { padding: 30px 30px 20px 0; }
+
+section.how-to aside .content img {
+	display      : block; /* Elements inside a block area. It'll push elements to the bottom */
+	margin-bottom: 15px;
+	width        : 70%;
+}
+
+section.how-to aside .content h4 { margin-bottom: 0; }
+section.how-to aside .content p { margin-bottom: .5em; }
+
+section.how-to aside .content a { 
+	display    : inline-block; 
+	color      : #cc6633;
+	font-weight: 700;
+}
