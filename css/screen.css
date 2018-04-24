@@ -182,3 +182,29 @@ section.how-to aside .content a {
 	color      : #cc6633;
 	font-weight: 700;
 }
+
+section.how-to blockquote {
+	margin          : 0;
+	width           : 32%;
+	color           : #444;
+	background-color: #fff;
+	position        : absolute; /* Absolute to the how-to section */
+	bottom          : 0;
+	right           : 4%; /* Just move it the right*/
+}
+
+section.how-to blockquote p { margin: 30px 30px 20px 50px; }
+
+section.how-to blockquote p.quote {
+	font-style: italic;
+	font-size : 1.2em; /* 1.2 size of the parent element */
+}
+
+section.how-to blockquote p.credit {
+	color       : #777;
+	font-size   : .9em;
+	margin-top  : 0; /* Replace the 30px of the parent element*/
+	padding-left: 20px;
+	line-height : 1.3em;
+	position    : relative; /* Some pseudo elements are going to be added */
+}
