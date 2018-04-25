@@ -109,7 +109,7 @@ section.main {
 	margin-bottom: 30px;
 	padding      : 0;
 }
-/* It cleans the floats elements inside section. A phanton element is inserted after sections */
+/* It cleans the float elements inside section. A phanton element is inserted after sections */
 section::after { /* Pseudo element that allows insert content after each section */
 	content: '';
 	display: block;
@@ -262,8 +262,35 @@ nav {
 	width           : 100%; /* If it's absolute the element is going to have the with of the content inside of it. So, it's neccesary to set width as the page container (absolute)*/
 }
 
+/* It cleans the float elements inside nav. A phanton element is inserted after nav 
+   It allows to redefine a phanton element to render all content inside nav 
+   It's applied every time an element is floated left
+*/
+nav::after {
+	content: '';
+	display: block;
+	clear  : both;
+}
+
 nav ul {
 	list-style: none;
 	margin    : 0;	
 	padding   : 0;
 }
+
+nav ul li:hover { background-color: #2b0306; }
+
+nav ul li a {
+	display        : inline-block; /* It behaves like graphic more than inline elements. With and Height of the element */
+	color          : #fff;
+	padding        : 10px 20px;
+	text-decoration: none;
+	width          : 125px; /* The width and inline block definition allows to define the submenu width*/
+	position       : relative; /* Some arrows are going to be positioned in relation with the anchor tabs */
+}
+
+nav ul li a:visited { color: #fff; }
+
+nav ul li a:hover { background-color: #6d0911; }
+
+nav > ul > li { float: left; } /* Every list is going to be to the left side of each other */
