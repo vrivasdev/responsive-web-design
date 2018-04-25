@@ -279,6 +279,8 @@ nav ul {
 }
 
 nav ul li:hover { background-color: #2b0306; }
+/* When the cursor hover the li element it's going to take action into the ul element */
+nav ul li:hover > ul { display: block; }
 
 nav ul li a {
 	display        : inline-block; /* It behaves like graphic more than inline elements. With and Height of the element */
@@ -293,4 +295,24 @@ nav ul li a:visited { color: #fff; }
 
 nav ul li a:hover { background-color: #6d0911; }
 
+nav ul ul {
+	position        : absolute; /* absolute to the page*/
+	top             : 100%;
+	background-color: #2b0306;
+	display         : none; /* Hidding sub menu elements */
+}
+
+nav ul ul li { position: relative; }
+/* It applies directly the absolute position of the ul ul*/
+nav ul ul ul {
+	left: 100%;/* Subelements to the left side */
+	top : 0px;
+}
+
+nav > ul { padding-left: 200px; }
 nav > ul > li { float: left; } /* Every list is going to be to the left side of each other */
+
+nav > ul > li > a {
+	width  : auto;
+	padding: 10px 20px 15px 20px;
+}
