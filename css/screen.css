@@ -208,3 +208,25 @@ section.how-to blockquote p.credit {
 	line-height : 1.3em;
 	position    : relative; /* Some pseudo elements are going to be added */
 }
+
+section.how-to blockquote::before {
+	content  : '\201c';
+	color    : #d2bd65;
+	position : absolute;
+	top      : 10px;
+	left     : 8px;
+	font-size: 5em;
+	font-size: serif;
+}
+
+section.how-to blockquote p.quote::after {
+	content    : '\201d';
+	font-family: serif;
+}
+
+section.how-to blockquote p.credit::before {
+	content : '\2014';
+	position: absolute;
+	left    : 0;
+	top     : -1px;
+}
