@@ -73,6 +73,7 @@ header {
 }
 
 header a.logo {
+	z-index        : 1; /* It scales up the element. The rest of them will be bellow this one */
 	position       : absolute; /* Absolute means that each element is relative to its first positioned ancestor element. Each attribute (width, height, top and left) is relative to the header */
 	display        : block;
 	width          : 160px;
@@ -250,3 +251,19 @@ footer a {
 
 footer a:visited { color: #777; }
 footer a:hover { color: #000; }
+
+/* Navigation */
+nav {
+	background-color: rgba(0,0,0,.65);
+	position        : absolute; /* absolute element to the parent*/
+	top             : 0px; /* Up to the top */
+	left            : 0px;
+	padding         : 50px 0 0 0;
+	width           : 100%; /* If it's absolute the element is going to have the with of the content inside of it. So, it's neccesary to set width as the page container (absolute)*/
+}
+
+nav ul {
+	list-style: none;
+	margin    : 0;	
+	padding   : 0;
+}
