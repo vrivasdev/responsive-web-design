@@ -232,12 +232,52 @@ section.how-to blockquote p.credit::before {
 	top     : -1px;
 }
 
+/* Navigation triangles */
+/* 
+Right arrow:
+  1. Solid borders
+  2. Width and Height to zero value. It's going to move to 45 grades
+     the parts of the left borders like this character ">"
+  3. Make transparent the top and bottom borders
+*/
+nav a[aria-haspopup="true"]::after {
+	content      : '';
+	display      : block;
+	width        : 0px;
+	height       : 0px;
+	position     : absolute; /* "nav ul li a" element is relative. It makes relative this element with the anchor tab*/
+	top          : 16px;
+	right        : 15px;
+	border-top   : 4px solid transparent;
+	border-bottom: 4px solid transparent;
+	border-left  : 4px solid #fff;
+}
+
+/* 
+Bottom arrow:
+  1. Solid borders
+  2. Width and Height to zero value (it's already done). It's going to move to 45 grades
+     the parts of the left borders like this character ">"
+  3. Make transparent the left and right borders
+*/
+nav > ul > li > a[aria-haspopup="true"]::after {
+	border-left : 4px solid transparent;
+	border-right: 4px solid transparent;
+	border-top  : 4px solid #fff;
+	left        : 20px;
+	right       : auto; /* Lets the brower calculate the right edge position */
+	bottom      : 6px;
+	top         : auto; /* Lets the brower calculate the top edge position */ 
+}
+/* End navigation triangles */
+
 /* Footer */
 footer {
 	font-size: .8em;
 	margin   : 40px;
 	color    : #999;
 }
+
 /** It allows to the anchor element float along aside the other element.
  *  This way the hipperlinks won't showed in separated lines because
  *  the development has block properties
@@ -309,6 +349,7 @@ nav ul ul ul {
 	top : 0px;
 }
 
+/* top-level */
 nav > ul { padding-left: 200px; }
 nav > ul > li { float: left; } /* Every list is going to be to the left side of each other */
 
