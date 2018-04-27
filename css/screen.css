@@ -482,10 +482,39 @@ nav > ul > li > a {
 
 	/* Section Atmosphere */
 	section.atmosphere article {
-		padding        : 160px 20px 0px 0px;
+		padding        : 160px 20px 0px 0px; /* Put the content to the bottom side */
 		background-size: 300px auto;
 		min-height     : initial;
 	}
+
+	/* Section - How To */
+	section.how-to aside {
+		width: 100%;
+		float: none; /* natural float page */
+		margin: 0;
+		position: relative; /* Images inside element are going to be absolute to this one */
+	}
+
+	section.how-to aside div.content { padding: 20px 20px 20px 150px; }
+
+	section.how-to aside div.content p { font-size: .9em; }
+
+	section.how-to aside div.content img {
+		display: inline-block;
+		width: 125px;
+		position: absolute;
+		top: 30px;
+		left: 0px;
+	}
+
+	section.how-to blockquote {
+		margin  : 0 20px 0 40px;
+		width   : 90%; /* 90% of the parent width */
+		padding : 1px 0px 20px 0px;
+		position: relative; /* the ' " ' symbol need to be absolute with the blockquote element */
+	}
+
+	section.how-to blockquote p.credit { margin-bottom: 0; }
 
 	/* Navigation */
 	nav {
