@@ -452,11 +452,27 @@ nav > ul > li > a {
 		background-position: left top;
 	}
 
+	header a.logo {
+		width: 100%; /* As width as the anchor tab */
+		height: 66px;
+		background-color: rgba(0, 0, 0, .65);
+	}
+
+	header div.hero {
+		width: 300px;
+		top  : 85px;
+		left : 130px;
+	}
+
+	header div.hero h1 { margin-bottom: 10px; }
+
 	/* Navigation */
 	nav {
 		position        : static; /* it makes the navigation menu to the original html flow. It'll be downside of the page */
 		width           : auto; /* As width as the page*/
 		padding         : 20px 15px;
 		background-color: #4b0a0c; /* The menu background color is gonna change because the background is different now */
+		background-size : 112px 46px;
+		background-position: 20px center; /* X: 20px Y: center */
 	}
 }
