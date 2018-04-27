@@ -438,3 +438,25 @@ nav > ul > li > a {
 	nav { padding-top: 80px; }
 	nav > ul { padding-left: 10px; }
 }
+
+@media screen and (max-width: 625px) {
+
+	h1 { font-size: 1em; }
+	h3 { margin-bottom: 0px; }
+	a.btn { font-size: .9em; }
+
+	/* Header: Smaller header ; */
+	header { 
+		height: 160px;
+		background-image: url(../images/banner_625.jpg);
+		background-position: left top;
+	}
+
+	/* Navigation */
+	nav {
+		position        : static; /* it makes the navigation menu to the original html flow. It'll be downside of the page */
+		width           : auto; /* As width as the page*/
+		padding         : 20px 15px;
+		background-color: #4b0a0c; /* The menu background color is gonna change because the background is different now */
+	}
+}
